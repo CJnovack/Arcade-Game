@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DetectCollision : MonoBehaviour
+public class NewBehaviourScript : MonoBehaviour
 {
     public GameObject objectToDisappear;
     // Start is called before the first frame update
@@ -18,7 +18,7 @@ public class DetectCollision : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Player 1")
+        if (other.gameObject.tag == "Player 1")
         {
             objectToDisappear.SetActive(true);
         }
@@ -26,7 +26,7 @@ public class DetectCollision : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        if(other.gameObject.tag == "Player 1")
+        if (other.gameObject.tag == "Player 1")
         {
             objectToDisappear.SetActive(false);
         }
