@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DetectCollision : MonoBehaviour
 {
-    public GameObject objectToDisappear;
+    //public GameObject objectToDisappear;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,20 +15,5 @@ public class DetectCollision : MonoBehaviour
     void Update()
     {
         
-    }
-    void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.tag == "Player 1")
-        {
-            objectToDisappear.SetActive(true);
-        }
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if(other.gameObject.tag == "Player 1")
-        {
-            objectToDisappear.SetActive(false);
-        }
     }
 }
