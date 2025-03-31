@@ -9,8 +9,11 @@ public class GameManager : MonoBehaviour
 {
     public GameObject titleScreen;
     public Button startButton;
-    //public TextMeshProUGUI gameEndText;
+    public TextMeshProUGUI gameEndText;
     public Button restartButton;
+    private bool trigger1Entered = false;
+    private bool trigger2Entered = false;
+    public GameObject gameEndScreen;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,9 +21,24 @@ public class GameManager : MonoBehaviour
     }
 
     // Update is called once per frame
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player" && gameObject.tag == "Trigger1")
+        {
+            trigger1Entered = true;
+        }
+        else if (other.gameObject.tag == "Player" && gameObject.tag == "Trigger2")
+        {
+            trigger2Entered = true;
+        }
+    }
     void Update()
     {
-        
+        if (trigger1Entered && trigger2Entered)
+        {
+            gameEndScreen.SetActive(true);
+        }
     }
     public void StartGame()
     {

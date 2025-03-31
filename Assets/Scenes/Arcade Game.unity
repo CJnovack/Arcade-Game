@@ -1438,7 +1438,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titleScreen: {fileID: 1023264687}
   startButton: {fileID: 1921079405}
+  gameEndText: {fileID: 166449869}
   restartButton: {fileID: 1910660456}
+  gameEndScreen: {fileID: 166449867}
 --- !u!4 &563431128
 Transform:
   m_ObjectHideFlags: 0
