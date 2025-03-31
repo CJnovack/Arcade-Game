@@ -44,4 +44,5 @@ public class PlayerControl1 : MonoBehaviour
         //transform.Translate(Vector3.down * verticalInput * Time.deltaTime * speed);
         //transform.Translate(1, 0, 0);
     }
+    
 }
