@@ -9,6 +9,8 @@ public class PlayerControl1 : MonoBehaviour
     public float speed = 5.0f;
     public float xRange = 8;
     public float yRange = 9;
+    public string horizontalAxis;
+    public string verticalAxis;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,8 +36,8 @@ public class PlayerControl1 : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, -yRange, transform.position.z);
         }
-        horizontalInput = Input.GetAxis("Horizontal");
-        verticalInput = Input.GetAxis("Vertical");
+        horizontalInput = Input.GetAxis(horizontalAxis);
+        verticalInput = Input.GetAxis(verticalAxis);
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
        // transform.Translate(Vector3.left * horizontalInput * Time.deltaTime * speed);
         transform.Translate(Vector3.up * verticalInput * Time.deltaTime * speed);

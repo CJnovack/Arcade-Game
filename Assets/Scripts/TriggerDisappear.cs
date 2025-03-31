@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class TriggerDisappear : MonoBehaviour
 {
     public GameObject objectToDisappear;
     // Start is called before the first frame update
@@ -18,17 +18,19 @@ public class NewBehaviourScript : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player 1")
+        if (other.gameObject.tag == "Player")
         {
-            objectToDisappear.SetActive(true);
+            objectToDisappear.SetActive(false);
+            Debug.Log("Door should dissappear/Trigger Entered");
         }
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Player 1")
+        if (other.gameObject.tag == "Player")
         {
-            objectToDisappear.SetActive(false);
+            objectToDisappear.SetActive(true);
+            Debug.Log("Door should reappear/Trigger Exit");
         }
     }
 }
