@@ -9,12 +9,12 @@ public class GameManager : MonoBehaviour
 {
     public GameObject titleScreen;
     public Button startButton;
-    public TextMeshProUGUI gameEndText;
+    //public TextMeshProUGUI gameEndText;
     public Button restartButton;
     // Start is called before the first frame update
     void Start()
     {
-        gameEndText.gameObject.SetActive(true);
+        //gameEndText.gameObject.SetActive(true);
     }
 
     // Update is called once per frame
