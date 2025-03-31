@@ -706,11 +706,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 7072a91a-c44d-4e10-b146-d7a4bf8989e7
+  cloudProjectId: 6157d554-b813-40ce-96db-6ec983cbd9e8
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: game project
-  organizationId: asallesg
+  projectName: Connor&Aline_ArcadeGame
+  organizationId: cjnovack
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
