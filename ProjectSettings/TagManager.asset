@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Trigger1
   - Trigger2
+  - Player 1
+  - Player 2
   layers:
   - Default
   - TransparentFX

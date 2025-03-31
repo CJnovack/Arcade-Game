@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameEnd : MonoBehaviour
 {
-    private bool trigger1Entered = false;
-    private bool trigger2Entered = false;
+    private bool player1InTrigger = false;
+    private bool player2InTrigger = false;
     public GameObject gameEndScreen;
     // Start is called before the first frame update
     void Start()
@@ -13,24 +14,54 @@ public class GameEnd : MonoBehaviour
         
     }
 
+    public void PlayerEntered(string playerTag)
+    {
+        if (playerTag == "Player 1")
+            player1InTrigger = true;
+        if (playerTag == "Player 2")
+            player2InTrigger = true;
+
+        CheckGameEnd();
+    }
+
+    public void PlayerExited(string playerTag)
+    {
+        if (playerTag == "Player1")
+            player1InTrigger = false;
+        else if (playerTag == "Player2")
+            player2InTrigger = false;
+    }
+
+    private void CheckGameEnd()
+    {
+        if (player1InTrigger && player2InTrigger)
+        {
+            gameEndScreen.SetActive(true);
+        }
+    }
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    
+    }
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player" && gameObject.tag == "Trigger1")
-        {
-            trigger1Entered = true;
-        }
-        else if (other.gameObject.tag == "Player" && gameObject.tag == "Trigger2")
-        {
-            trigger2Entered = true;
-        }
+        //if (other.gameObject.tag == "Player" && gameObject.tag == "Trigger1")
+        //{
+          //  trigger1Entered = true;
+        //}
+        //else if (other.gameObject.tag == "Player" && gameObject.tag == "Trigger2")
+        //{
+          //  trigger2Entered = true;
+        //}
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (trigger1Entered && trigger2Entered)
-        {
-            gameEndScreen.SetActive(true);
-        }
+        //if (trigger1Entered && trigger2Entered)
+        //{
+          //  gameEndScreen.SetActive(true);
+        //}
     }
 }

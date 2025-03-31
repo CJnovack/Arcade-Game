@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public Button restartButton;
     private bool trigger1Entered = false;
     private bool trigger2Entered = false;
-    public GameObject gameEndScreen;
+    public GameObject GameEndScreen;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
     {
         if (trigger1Entered && trigger2Entered)
         {
-            gameEndScreen.SetActive(true);
+            GameEndScreen.SetActive(true);
         }
     }
     public void StartGame()
