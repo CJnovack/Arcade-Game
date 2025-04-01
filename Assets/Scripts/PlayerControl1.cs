@@ -11,10 +11,11 @@ public class PlayerControl1 : MonoBehaviour
     public float yRange = 9;
     public string horizontalAxis;
     public string verticalAxis;
+    public bool isGameActive;
     // Start is called before the first frame update
     void Start()
     {
-        
+        isGameActive = true;
     }
 
     // Update is called once per frame
@@ -44,5 +45,10 @@ public class PlayerControl1 : MonoBehaviour
         //transform.Translate(Vector3.down * verticalInput * Time.deltaTime * speed);
         //transform.Translate(1, 0, 0);
     }
-    
+    public void GameEnd()
+    {
+        //PlayerControl1.gameObject.GetComponent<PlayerControl1>().enabled = false;
+        isGameActive = false;
+    }
+
 }
