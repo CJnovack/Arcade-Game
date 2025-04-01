@@ -239,7 +239,6 @@ GameObject:
   - component: {fileID: 166449870}
   - component: {fileID: 166449869}
   - component: {fileID: 166449871}
-  - component: {fileID: 166449872}
   m_Layer: 5
   m_Name: GameEnd
   m_TagString: Untagged
@@ -376,19 +375,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameEnd: {fileID: 563431129}
---- !u!114 &166449872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 166449867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 427bf2c8ef57f954db8afc5844dd77fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  restartButton: {fileID: 1910660454}
 --- !u!1 &224734322
 GameObject:
   m_ObjectHideFlags: 0
@@ -1236,7 +1222,6 @@ GameObject:
   - component: {fileID: 516534351}
   - component: {fileID: 516534352}
   - component: {fileID: 516534353}
-  - component: {fileID: 516534354}
   m_Layer: 0
   m_Name: Trigger2
   m_TagString: Trigger2
@@ -1346,6 +1331,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameEndScreen: {fileID: 166449867}
   restartButton: {fileID: 0}
+  isGameActive: 0
 --- !u!114 &516534353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1359,19 +1345,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameEnd: {fileID: 563431129}
---- !u!114 &516534354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 516534347}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 427bf2c8ef57f954db8afc5844dd77fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  restartButton: {fileID: 1910660454}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1475,7 +1448,6 @@ GameObject:
   - component: {fileID: 563431128}
   - component: {fileID: 563431127}
   - component: {fileID: 563431129}
-  - component: {fileID: 563431130}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1501,6 +1473,7 @@ MonoBehaviour:
   restartButton: {fileID: 1910660456}
   GameEndScreen: {fileID: 0}
   isGameActive: 0
+  player: {fileID: 0}
 --- !u!4 &563431128
 Transform:
   m_ObjectHideFlags: 0
@@ -1530,19 +1503,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameEndScreen: {fileID: 166449867}
   restartButton: {fileID: 1910660456}
---- !u!114 &563431130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 563431126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 427bf2c8ef57f954db8afc5844dd77fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  restartButton: {fileID: 1910660454}
+  isGameActive: 0
 --- !u!1 &586017642
 GameObject:
   m_ObjectHideFlags: 0
@@ -4664,7 +4625,6 @@ GameObject:
   - component: {fileID: 1801870040}
   - component: {fileID: 1801870041}
   - component: {fileID: 1801870042}
-  - component: {fileID: 1801870043}
   m_Layer: 0
   m_Name: Trigger1
   m_TagString: Trigger1
@@ -4774,6 +4734,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameEndScreen: {fileID: 166449867}
   restartButton: {fileID: 0}
+  isGameActive: 0
 --- !u!114 &1801870042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4787,19 +4748,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameEnd: {fileID: 563431129}
---- !u!114 &1801870043
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1801870036}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 427bf2c8ef57f954db8afc5844dd77fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  restartButton: {fileID: 1910660454}
 --- !u!1 &1830166965
 GameObject:
   m_ObjectHideFlags: 0

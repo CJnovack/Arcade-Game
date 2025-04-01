@@ -10,10 +10,11 @@ public class GameEnd : MonoBehaviour
     private bool player2InTrigger = false;
     public GameObject gameEndScreen;
     public Button restartButton;
+    public bool isGameActive;
     // Start is called before the first frame update
     void Start()
     {
-        
+        isGameActive = true;
     }
 
     public void PlayerEntered(string playerTag)
@@ -41,6 +42,7 @@ public class GameEnd : MonoBehaviour
             gameEndScreen.SetActive(true);
             restartButton.gameObject.SetActive(true);
             Debug.Log("RestartButtonShouldAppear");
+            isGameActive = false;
         }
     }
     public void RestartGame()
