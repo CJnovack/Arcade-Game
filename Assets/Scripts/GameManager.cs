@@ -40,6 +40,9 @@ public class GameManager : MonoBehaviour
         if (trigger1Entered && trigger2Entered)
         {
             GameEndScreen.SetActive(true);
+            restartButton.gameObject.SetActive(true);
+            Debug.Log("RestartButtonShouldAppear");
+            
         }
     }
     public void StartGame()

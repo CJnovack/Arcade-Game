@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameEnd : MonoBehaviour
@@ -8,6 +9,7 @@ public class GameEnd : MonoBehaviour
     private bool player1InTrigger = false;
     private bool player2InTrigger = false;
     public GameObject gameEndScreen;
+    public Button restartButton;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +39,8 @@ public class GameEnd : MonoBehaviour
         if (player1InTrigger && player2InTrigger)
         {
             gameEndScreen.SetActive(true);
+            restartButton.gameObject.SetActive(true);
+            Debug.Log("RestartButtonShouldAppear");
         }
     }
     public void RestartGame()
