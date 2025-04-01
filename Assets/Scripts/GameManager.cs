@@ -14,9 +14,11 @@ public class GameManager : MonoBehaviour
     private bool trigger1Entered = false;
     private bool trigger2Entered = false;
     public GameObject GameEndScreen;
+    public bool isGameActive;
     // Start is called before the first frame update
     void Start()
     {
+        //isGameActive = true;
         //gameEndText.gameObject.SetActive(true);
     }
 
@@ -70,5 +72,6 @@ public class GameManager : MonoBehaviour
     public void GameEnd()
     {
         restartButton.gameObject.SetActive(true);
+        isGameActive = false;
     }
 }
