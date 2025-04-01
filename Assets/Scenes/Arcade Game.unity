@@ -1473,7 +1473,6 @@ MonoBehaviour:
   restartButton: {fileID: 1910660456}
   GameEndScreen: {fileID: 0}
   isGameActive: 0
-  player: {fileID: 0}
 --- !u!4 &563431128
 Transform:
   m_ObjectHideFlags: 0

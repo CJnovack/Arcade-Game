@@ -12,6 +12,7 @@ public class PlayerControl1 : MonoBehaviour
     public string horizontalAxis;
     public string verticalAxis;
     public bool isGameActive;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -37,17 +38,14 @@ public class PlayerControl1 : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, -yRange, transform.position.z);
         }
-        //if (isGameActive == true)
+        if (isGameActive == true)
         {
-            //isGameActive = false;
+            horizontalInput = Input.GetAxis(horizontalAxis);
+            verticalInput = Input.GetAxis(verticalAxis);
+            transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
+            transform.Translate(Vector3.up * verticalInput * Time.deltaTime * speed);
         }
-        horizontalInput = Input.GetAxis(horizontalAxis);
-        verticalInput = Input.GetAxis(verticalAxis);
-        transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
-       // transform.Translate(Vector3.left * horizontalInput * Time.deltaTime * speed);
-        transform.Translate(Vector3.up * verticalInput * Time.deltaTime * speed);
-        //transform.Translate(Vector3.down * verticalInput * Time.deltaTime * speed);
-        //transform.Translate(1, 0, 0);
+        
     }
     public void GameEnd()
     {

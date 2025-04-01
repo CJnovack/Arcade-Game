@@ -15,13 +15,18 @@ public class GameManager : MonoBehaviour
     private bool trigger2Entered = false;
     public GameObject GameEndScreen;
     public bool isGameActive;
-    public GameObject player;
+    //public bool gameEnd = false;
+    private PlayerControl1 playerControl1Script;
+    private PlayerControl1 playerControl2Script;
     // Start is called before the first frame update
     void Start()
     {
-        isGameActive = true;
-        //gameEndText.gameObject.SetActive(true);
         Cursor.visible = false;
+       // isGameActive = true;
+        playerControl1Script = GameObject.Find("Player1").GetComponent<PlayerControl1>();
+        playerControl2Script = GameObject.Find("Player2").GetComponent<PlayerControl1>();
+        //gameEndText.gameObject.SetActive(true);
+        
     
 }
 
@@ -46,6 +51,8 @@ public class GameManager : MonoBehaviour
             restartButton.gameObject.SetActive(true);
             Debug.Log("RestartButtonShouldAppear");
             isGameActive = false;
+            playerControl1Script.isGameActive = false;
+            playerControl2Script.isGameActive = false;
 
         }
         if (Input.GetKeyUp(KeyCode.Escape))
@@ -53,6 +60,7 @@ public class GameManager : MonoBehaviour
             // or if (Input.GetButtonUp("Cancel")) {
             Application.Quit();
         }
+        
 
     }
     public void StartGame()
