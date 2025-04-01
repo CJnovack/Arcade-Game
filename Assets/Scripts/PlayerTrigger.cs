@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerTrigger : MonoBehaviour
 {
     public GameEnd gameEnd;
+    //public RestartGame restartButton;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +17,7 @@ public class PlayerTrigger : MonoBehaviour
         if(other.CompareTag("Player 1") || other.CompareTag("Player 2"))
         {
             gameEnd.PlayerEntered(other.tag);
+           // restartButton.gameObject.SetActive(true);
         }
     }
 
@@ -24,6 +26,7 @@ public class PlayerTrigger : MonoBehaviour
         if(other.CompareTag("Player 1") || other.CompareTag("Player 2"))
         {
             gameEnd.PlayerExited(other.tag);
+            //restartButton.gameObject.SetActive(true);
         }
     }
 
