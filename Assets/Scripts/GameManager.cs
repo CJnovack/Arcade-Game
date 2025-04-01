@@ -67,14 +67,14 @@ public class GameManager : MonoBehaviour
         startButton.onClick.RemoveListener(StartGame);
     }
 
-    public void RestartGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
     public void GameEnd()
     {
         restartButton.gameObject.SetActive(true);
         isGameActive = false;
+    }
+
+   public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
