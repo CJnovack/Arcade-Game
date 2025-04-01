@@ -14,7 +14,7 @@ public class GameEnd : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        isGameActive = true;
+        //isGameActive = true;
     }
 
     public void PlayerEntered(string playerTag)

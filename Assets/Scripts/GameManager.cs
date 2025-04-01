@@ -19,9 +19,11 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //isGameActive = true;
+        isGameActive = true;
         //gameEndText.gameObject.SetActive(true);
-    }
+        Cursor.visible = false;
+    
+}
 
     // Update is called once per frame
 
@@ -43,9 +45,15 @@ public class GameManager : MonoBehaviour
             GameEndScreen.SetActive(true);
             restartButton.gameObject.SetActive(true);
             Debug.Log("RestartButtonShouldAppear");
-            player.gameObject.GetComponent<PlayerControl1>().enabled = false;
+            isGameActive = false;
 
         }
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            // or if (Input.GetButtonUp("Cancel")) {
+            Application.Quit();
+        }
+
     }
     public void StartGame()
     {

@@ -37,6 +37,10 @@ public class PlayerControl1 : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, -yRange, transform.position.z);
         }
+        //if (isGameActive == true)
+        {
+            //isGameActive = false;
+        }
         horizontalInput = Input.GetAxis(horizontalAxis);
         verticalInput = Input.GetAxis(verticalAxis);
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
